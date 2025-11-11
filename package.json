@@ -2,10 +2,9 @@
   "name": "paymentverification",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "tsc",
-    "start": "node api/paymentWebhook.js"
-  },
+  "build": "chmod +x node_modules/.bin/tsc && tsc",
+  "dev": "ts-node-dev --respawn --transpile-only server.ts"
+},
   "dependencies": {
     "@devfunlabs/web-sdk": "latest",
     "dotenv": "^16.4.1",
