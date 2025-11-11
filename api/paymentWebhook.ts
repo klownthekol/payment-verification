@@ -1,3 +1,5 @@
+console.log("🧠 paymentWebhook function started");
+
 import { Request, Response } from "express";
 import dotenv from "dotenv";
 import { DevbaseClient } from "@devfunlabs/web-sdk";
