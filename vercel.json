@@ -5,7 +5,7 @@
       "memory": 1024,
       "maxDuration": 10,
       "includeFiles": ["node_modules/**"],
-      "excludeFiles": ["**/*.css", "**/*.scss", "**/*.less"]
+      "excludeFiles": "**/*.{css,scss,less}"
     }
   },
   "build": {
