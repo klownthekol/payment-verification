@@ -1,6 +1,8 @@
 {
+  "version": 2,
   "functions": {
     "api/**/*.ts": {
+      "runtime": "nodejs18.x",
       "memory": 1024,
       "maxDuration": 10
     }
@@ -9,5 +11,8 @@
     "env": {
       "NODE_OPTIONS": "--require ./ignore-css.js"
     }
-  }
+  },
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1.ts" }
+  ]
 }
