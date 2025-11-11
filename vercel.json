@@ -4,12 +4,10 @@
     "api/**/*.ts": {
       "runtime": "nodejs18.x",
       "memory": 1024,
-      "maxDuration": 10
-    }
-  },
-  "build": {
-    "env": {
-      "NODE_OPTIONS": "--require ./ignore-css.js"
+      "maxDuration": 10,
+      "env": {
+        "NODE_OPTIONS": "--require ./api/ignore-css.js"
+      }
     }
   },
   "routes": [
