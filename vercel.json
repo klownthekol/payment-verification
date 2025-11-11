@@ -6,10 +6,5 @@
       "maxDuration": 10,
       "excludeFiles": "node_modules/@devfunlabs/web-sdk/styles.css"
     }
-  },
-  "build": {
-    "env": {
-      "NODE_OPTIONS": "--max-old-space-size=4096"
-    }
   }
 }
