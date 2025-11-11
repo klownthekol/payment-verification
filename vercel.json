@@ -1,24 +1,16 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/*.ts",
-      "use": "@vercel/node",
-      "config": {
-        "maxLambdaSize": "15mb"
-      }
-    }
-  ],
   "functions": {
     "api/**/*.ts": {
       "runtime": "nodejs18.x",
       "memory": 1024,
       "maxDuration": 10,
-      "excludeFiles": ["**/*.css", "**/*.scss", "**/*.less"],
-      "externalDependencies": ["@devfunlabs/web-sdk"]
+      "includeFiles": ["node_modules/**"],
+      "excludeFiles": ["**/*.css", "**/*.scss", "**/*.less"]
     }
   },
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1.ts" }
-  ]
+  "build": {
+    "env": {
+      "NODE_OPTIONS": "--max-old-space-size=4096"
+    }
+  }
 }
