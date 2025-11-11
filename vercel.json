@@ -13,5 +13,6 @@
   "outputDirectory": "api",
   "env": {
     "NODE_OPTIONS": "--require ./api/ignore-css.js"
-  }
+  },
+  "nodeVersion": "18.x"
 }
