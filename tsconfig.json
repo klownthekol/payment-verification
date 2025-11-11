@@ -13,9 +13,5 @@
     "moduleResolution": "node16"
   },
   "include": ["api/**/*"],
-  "exclude": ["node_modules"],
-  "ts-node": {
-    "transpileOnly": true,
-    "require": ["./css-loader.js"]
-  }
+  "exclude": ["node_modules"]
 }
