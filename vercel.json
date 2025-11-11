@@ -2,7 +2,7 @@
   "version": 2,
   "functions": {
     "api/**/*.ts": {
-      "runtime": "@vercel/node@3.0.0",
+      "runtime": "nodejs20.x",
       "memory": 1024,
       "maxDuration": 10
     }
@@ -10,8 +10,9 @@
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1.ts" }
   ],
-  "outputDirectory": "api",
   "env": {
     "NODE_OPTIONS": "--require ./api/ignore-css.js"
-  }
+  },
+  "buildCommand": "chmod +x node_modules/.bin/tsc && tsc",
+  "outputDirectory": "api"
 }
