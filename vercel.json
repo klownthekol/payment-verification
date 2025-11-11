@@ -10,6 +10,7 @@
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1.ts" }
   ],
+  "outputDirectory": "api",
   "env": {
     "NODE_OPTIONS": "--require ./api/ignore-css.js"
   }
