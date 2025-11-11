@@ -4,12 +4,7 @@
       "runtime": "nodejs18.x",
       "memory": 1024,
       "maxDuration": 10,
-      "excludeFiles": [
-        "node_modules/@devfunlabs/web-sdk/styles.css",
-        "node_modules/@devfunlabs/web-sdk/**/*.css",
-        "node_modules/@devfunlabs/web-sdk/**/*.scss",
-        "node_modules/@devfunlabs/web-sdk/**/*.less"
-      ]
+      "excludeFiles": "node_modules/@devfunlabs/web-sdk/styles.css"
     }
   },
   "build": {
